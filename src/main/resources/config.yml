@@ -1,0 +1,40 @@
+# ============ WhiteTool — настройка ============
+
+telegram:
+  # Токен бота от @BotFather
+  bot-token: "8970378341:AAFqGAS54gzJgibRCD8vERjVrO3Yu6HNejM"
+
+  # ID группы, в которой работает команда /whitelist.
+  # Узнать: напишите /id в группе (ответит только владельцу).
+  # У супергрупп id отрицательный.
+  # 0 = команды в группах отключены.
+  group-chat-id: -1003914689875
+
+  # Разрешать ли /whitelist в группе всем администраторам группы
+  allow-group-admins: true
+
+  # --- Обход блокировки Telegram (актуально для хостинга в РФ) ---
+  # Если хостинг режет api.telegram.org, укажите здесь адрес своего
+  # обратного прокси, который пересылает запросы на Telegram
+  # (например, бесплатный Cloudflare Worker или nginx на VPS за границей).
+  # По умолчанию — через ваш Cloudflare Worker (обход блокировки РФ).
+  api-base-url: "https://throbbing-sky-521f.timofey-atabekov.workers.dev"
+
+  # Либо доступ через SOCKS/HTTP прокси. enabled: false = не использовать.
+  proxy:
+    enabled: false
+    type: "SOCKS"        # SOCKS или HTTP
+    host: ""
+    port: 1080
+    username: ""         # пусто, если прокси без авторизации
+    password: ""
+
+whitelist:
+  # Проверка ника перед добавлением (защита от мусора в команде)
+  nick-pattern: "^[A-Za-z0-9_]{3,16}$"
+
+# Внутренние тайминги синхронизации (менять не нужно)
+sync:
+  collect-seconds: 2
+  flush-seconds: 3
+  buffer-limit: 300

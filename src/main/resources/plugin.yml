@@ -1,0 +1,15 @@
+name: WhiteTool
+version: '1.0.0'
+main: ru.whitetool.WhiteToolPlugin
+api-version: '1.13'
+author: iva
+description: Whitelist synchronization utility.
+commands:
+  whitetool:
+    description: WhiteTool maintenance
+    usage: /whitetool reload
+    permission: whitetool.admin
+permissions:
+  whitetool.admin:
+    description: WhiteTool maintenance
+    default: op
